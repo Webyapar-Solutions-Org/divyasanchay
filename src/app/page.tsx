@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import Footer from "./Footer";
 import Header from "./Header";
+import HeroVideo from "./HeroVideo";
 import SipCalculator from "./SipCalculator";
 import { breadcrumbJsonLd, createMetadata, JsonLd, siteUrl } from "./seo";
 
@@ -101,9 +102,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="mx-auto flex h-[420px] w-full max-w-[378px] items-center justify-center rounded-[10px] border border-[#111] bg-white lg:h-[672px]">
-            <Image alt="" height={30} src="/figma-home/hero-play.svg" width={30} />
-          </div>
+          <HeroVideo />
         </div>
       </section>
 
