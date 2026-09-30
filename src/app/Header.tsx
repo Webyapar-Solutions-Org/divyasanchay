@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { loginHref } from "./constants";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -10,8 +11,6 @@ const navItems = [
   { label: "Products", href: "/our-products" },
   { label: "Contact", href: "/contact" },
 ];
-
-const loginHref = "https://login.divyasanchay.com/client-login";
 
 export function Logo() {
   return (
@@ -75,7 +74,7 @@ export default function Header() {
 
       <div className={isMenuOpen ? "fixed inset-0 z-50 bg-white md:hidden" : "hidden"} role="dialog" aria-modal="true" aria-label="Mobile navigation">
         <div className="flex h-[76px] items-center justify-between border-b border-[#d8d8d8] px-5 shadow-[0_4px_6px_rgba(0,0,0,0.22)]">
-          <h2 className="text-[32px] font-black leading-none text-[#163f86]">MENU</h2>
+          <h2 className="text-[24px] font-black leading-none text-[#163f86]">MENU</h2>
           <button
             aria-label="Close menu"
             className="text-[42px] font-light leading-none text-black"
@@ -86,12 +85,12 @@ export default function Header() {
           </button>
         </div>
 
-        <nav className="px-5 pt-12">
+        <nav className="px-5 pt-4">
           <div className="space-y-0">
             {navItems.map((item) => (
               <a
                 key={item.label}
-                className={`block border-b border-[#e2e2e2] px-6 py-9 text-[28px] font-medium leading-none ${
+                className={`block border-b border-[#e2e2e2] px-6 py-6 text-[22px] font-medium leading-none ${
                   item.href === pathname ? "font-black text-[#f3702b]" : "text-[#173f88]"
                 }`}
                 href={item.href}

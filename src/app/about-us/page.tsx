@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import Footer from "../Footer";
 import Header from "../Header";
+import { loginHref } from "../constants";
 import { breadcrumbJsonLd, createMetadata, JsonLd } from "../seo";
 
 export const metadata: Metadata = createMetadata({
@@ -165,9 +166,9 @@ export default function AboutUs() {
                 </li>
               ))}
             </ul>
-            <button className="mt-[50px] flex h-[50px] w-[220px] items-center justify-center rounded-lg bg-[#ed702d] px-4 text-2xl font-normal text-white">
+            <a className="mt-[50px] flex h-[50px] w-[220px] items-center justify-center rounded-lg bg-[#ed702d] px-4 text-2xl font-normal text-white" href={loginHref} rel="noreferrer" target="_blank">
               Start Investing
-            </button>
+            </a>
           </div>
         </div>
 

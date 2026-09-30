@@ -198,6 +198,7 @@ export default function SipCalculator() {
   const [monthlyAmount, setMonthlyAmount] = useState(5000);
   const [years, setYears] = useState(15);
   const [annualReturn, setAnnualReturn] = useState(12);
+  const [showMobileChart, setShowMobileChart] = useState(false);
 
   const results = useMemo(() => {
     const invested = monthlyAmount * years * 12;
@@ -224,11 +225,13 @@ export default function SipCalculator() {
           <SliderField label="SIP Amount" max={100000} min={500} onChange={setMonthlyAmount} prefix="Rs." step={500} value={monthlyAmount} />
           <SliderField label="Investment Duration" max={40} min={1} onChange={setYears} suffix="Years" value={years} />
           <SliderField label="Expected Rate of Return % (p.a.)" max={30} min={1} onChange={setAnnualReturn} suffix="%" value={annualReturn} />
-          <button className="h-[60px] w-full rounded-[10px] bg-[#ed702d] text-2xl font-normal text-white shadow-sm lg:w-[266px]" type="button">
+          <button className="h-[60px] w-full rounded-[10px] bg-[#ed702d] text-2xl font-normal text-white shadow-sm lg:w-[266px]" onClick={() => setShowMobileChart(true)} type="button">
             Calculate
           </button>
         </div>
-        <SipChart maxValue={results.maxValue} points={results.chartPoints} />
+        <div className={showMobileChart ? "block" : "hidden lg:block"}>
+          <SipChart maxValue={results.maxValue} points={results.chartPoints} />
+        </div>
       </div>
       <div className="mt-[50px] grid gap-4 md:grid-cols-3 lg:gap-6">
         {stats.map(([label, value]) => (

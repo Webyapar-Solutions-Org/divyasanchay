@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import HeroVideo from "./HeroVideo";
 import SipCalculator from "./SipCalculator";
+import { loginHref } from "./constants";
 import { breadcrumbJsonLd, createMetadata, JsonLd, siteUrl } from "./seo";
 
 export const metadata: Metadata = createMetadata({
@@ -160,9 +161,9 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <button className="mt-12 h-[60px] rounded-[10px] bg-[#ed702d] px-9 text-2xl font-normal text-white">
+          <a className="mt-12 inline-flex h-[60px] items-center justify-center rounded-[10px] bg-[#ed702d] px-9 text-2xl font-normal text-white" href={loginHref} rel="noreferrer" target="_blank">
             Start Investing
-          </button>
+          </a>
         </div>
       </section>
 

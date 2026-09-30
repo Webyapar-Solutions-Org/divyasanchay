@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import Footer from "../Footer";
 import Header from "../Header";
+import { loginHref } from "../constants";
 import { breadcrumbJsonLd, createMetadata, JsonLd, siteUrl } from "../seo";
 
 export const metadata: Metadata = createMetadata({
@@ -132,9 +133,9 @@ export default function OurProducts() {
           ))}
         </div>
 
-        <button className="mt-9 flex h-[60px] w-full max-w-[340px] items-center justify-center rounded-lg bg-[#ed702d] px-4 text-2xl font-normal text-white">
+        <a className="mt-9 flex h-[60px] w-full max-w-[340px] items-center justify-center rounded-lg bg-[#ed702d] px-4 text-2xl font-normal text-white" href={loginHref} rel="noreferrer" target="_blank">
           Start Investing
-        </button>
+        </a>
       </section>
 
       <Footer />
