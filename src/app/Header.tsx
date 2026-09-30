@@ -14,11 +14,11 @@ const navItems = [
 
 export function Logo() {
   return (
-    <div className="relative size-11 shrink-0 lg:size-[110px]">
+    <div className="relative size-14 shrink-0 lg:size-[110px]">
       <Image alt="" className="object-contain" fill sizes="110px" src="/figma-home/logo-circle.svg" />
       <Image
         alt="Divyasanchay Enterprises"
-        className="absolute left-1/2 top-1/2 size-[40px] -translate-x-1/2 -translate-y-1/2 rounded-full object-cover lg:size-[100px]"
+        className="absolute left-1/2 top-1/2 size-[50px] -translate-x-1/2 -translate-y-1/2 rounded-full object-cover lg:size-[100px]"
         height={100}
         src="/figma-home/logo-mark.png"
         width={100}
@@ -54,11 +54,13 @@ export default function Header() {
           <button
             aria-expanded={isMenuOpen}
             aria-label="Open menu"
-            className="text-base font-black text-[#8b8f98] md:hidden"
+            className="flex size-11 flex-col items-center justify-center gap-1.5 text-[#123378] md:hidden"
             onClick={() => setIsMenuOpen(true)}
             type="button"
           >
-            =
+            <span className="h-1 w-8 rounded-full bg-current" />
+            <span className="h-1 w-8 rounded-full bg-current" />
+            <span className="h-1 w-8 rounded-full bg-current" />
           </button>
           <div className="hidden items-center gap-5 md:flex">
             <a className="flex h-[50px] items-center gap-[10px] rounded border border-[#123378] bg-[#eaf4fc] px-[10px] text-[20px] font-normal text-[#123378]" href="tel:+917980536257">
