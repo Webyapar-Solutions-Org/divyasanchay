@@ -157,7 +157,7 @@ export default function AboutUs() {
           </div>
           <div>
             <Eyebrow>Why Choose Us</Eyebrow>
-            <h2 className="mt-[30px] text-4xl font-bold leading-normal">An investment that takes you to great hights</h2>
+            <h2 className="mt-[30px] text-4xl font-bold leading-normal">An investment that takes you to great heights</h2>
             <ul className="mt-[50px] space-y-5 text-lg font-normal text-[#123378]">
               {reasons.map((reason) => (
                 <li key={reason} className="flex items-center gap-5">

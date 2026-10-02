@@ -85,9 +85,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-lg font-semibold uppercase">Company Address:</h4>
+          <h4 className="text-lg font-semibold uppercase">Address:</h4>
           <p className="mt-5 text-base font-normal leading-normal">
-            <span className="font-semibold">Head Office:</span>{" "}
+            <span className="font-semibold">Office:</span>{" "}
             <a className="transition-colors hover:text-[#ed702d]" href={mapHref(headOfficeAddress)} rel="noreferrer" target="_blank">
               {headOfficeAddress}
             </a>

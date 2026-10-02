@@ -14,7 +14,7 @@ export const metadata: Metadata = createMetadata({
 
 const contactItems = [
   {
-    title: "Head Office",
+    title: "Registered Office",
     body: "Sapnil Residency,Flat no. F2, 2nd Floor, S. P. Mukherjee Road, Murgasol, Asansol, West Bengal, PIN-713303",
     icon: "/figma-contact/location.svg",
   },

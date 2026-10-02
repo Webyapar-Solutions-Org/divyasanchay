@@ -152,7 +152,7 @@ export default function Home() {
         </div>
         <div className="self-center">
           <p className="border-l-4 border-[#ed702d] pl-4 text-sm font-bold uppercase text-[#ed702d]">Why Choose Us</p>
-          <h2 className="mt-8 max-w-3xl text-4xl font-bold leading-normal text-[#111]">An investment that takes you to great hights</h2>
+          <h2 className="mt-8 max-w-3xl text-4xl font-bold leading-normal text-[#111]">An investment that takes you to great heights</h2>
           <ul className="mt-12 space-y-6 text-sm font-normal text-[#123378]">
             {reasons.map((reason) => (
               <li key={reason} className="flex items-center gap-5">
